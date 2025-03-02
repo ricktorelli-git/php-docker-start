@@ -1,0 +1,38 @@
+{
+    "name": "rick-torelli/php-docker",
+    "description": "Docker para desenvolvimento de aplicações PHP",
+    "type": "project",
+    "keywords": [
+        "docker",
+        "php",
+        "development"
+    ],
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "psr-4": {
+            "RickTorelli\\": "app/"
+        },
+        "files": [
+            "app/public/autoload.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Seu Nome Completo",
+            "email": "seuemail@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-pdo": "*",
+        "twbs/bootstrap": "^5.3",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^5.2"
+    }
+}

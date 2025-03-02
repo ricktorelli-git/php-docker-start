@@ -1,0 +1,14 @@
+/vendor
+/.idea/
+/docker/mysql/data/*
+/docker/redis/data/*
+.DS_Store
+.env
+composer.lock
+composer.phar
+
+
+
+
+
+
