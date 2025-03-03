@@ -33,11 +33,11 @@ APP_DESCRIPTION='Projeto PHP com Docker para desenvolvimento'
 APP_AUTHOR=''
 APP_PORT=80
 
-DB_HOST=mysql # Nome do container do mysql no docker-compose.yml
+DB_HOST=mysql
 DB_ROOT_PASSWORD=root
 DB_DATABASE=php_docker
 DB_USER=user
-DB_PASSWORD=
+DB_PASSWORD=password
 DB_PORT=3306
 PHPMYADMIN_PORT=8081
 REDIS_PORT=6379
@@ -87,6 +87,11 @@ docker-compose run --rm php_fpm composer require pacote/nome
 ```bash
 docker-compose run --rm php_fpm composer dump-autoload
 ```
+- Para acessar o container mysql e executar comandos sql:
+```bash
+docker-compose exec mysql mysql -uroot -p
+```
+
 
 
 
