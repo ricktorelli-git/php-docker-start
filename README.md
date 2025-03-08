@@ -24,7 +24,9 @@ layout e make para automatizar as tarefas.
 ```bash
 git clone nome_do_repositorio-no-github
 ```
-- Acesse o diretório do projeto:
+- Acesse o diretório do projeto
+- Dentro de 'app/' foi criada uma sugestão de estrutura de diretórios para o projeto no padrão MVC, mas você pode alterar
+  conforme a necessidade do seu projeto, o importante é que o diretório 'public/' seja o diretório raiz do projeto.
 
 - Altere as variáveis de ambiente no arquivo .env.example
 ````bash
