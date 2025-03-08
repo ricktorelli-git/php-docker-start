@@ -44,7 +44,8 @@ DB_PORT=3306
 PHPMYADMIN_PORT=8081
 REDIS_PORT=6379
 ````
-- Execute o comando 'make', este comando irá criar os containers e instalar as dependências do projeto.:
+- Execute o comando 'make', este comando irá criar os containers e instalar as dependências do projeto e copiar o
+`env.example` para o `.env`.:
 ```bash
 make
 ````
