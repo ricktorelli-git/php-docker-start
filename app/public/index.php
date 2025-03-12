@@ -1,15 +1,8 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
-
-use Dotenv\Dotenv;
-use RickTorelli\config\database\ConnectionMysql;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
-$dotenv->load();
-$db = new ConnectionMysql();
-$pdo = $db->getConnection();
-$databaseStatus = checkDatabaseConnection($pdo);
+global $databaseStatus;
+require_once __DIR__ . '/bootstrap.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,5 +1,5 @@
 {
-    "name": "rick-torelli/php-docker",
+    "name": "seu-usuario/nome-do-projeto",
     "description": "Docker para desenvolvimento de aplicações PHP",
     "type": "project",
     "keywords": [
@@ -12,10 +12,10 @@
     ],
     "autoload": {
         "psr-4": {
-            "RickTorelli\\": "app/"
+            "app\\": "app/"
         },
         "files": [
-            "app/public/autoload.php"
+            "app/public/bootstrap.php"
         ]
     },
     "authors": [

@@ -1,13 +1,15 @@
 <?php
 
-namespace RickTorelli\config\database;
+declare(strict_types=1);
+
+namespace app\database;
 
 use PDO;
 use PDOException;
 
 class ConnectionMysql
 {
-    private $pdo;
+    private PDO $pdo;
 
     public function __construct()
     {
@@ -27,8 +29,18 @@ class ConnectionMysql
         }
     }
 
-    public function getConnection()
+    public function getConnection(): PDO
     {
         return $this->pdo;
+    }
+    public function checkDatabaseConnection($pdo) {
+        try {
+            $stmt = $pdo->query("SELECT 1");
+            if ($stmt) {
+                return "Conexão com o banco de dados está ok. " . $_ENV['DB_DATABASE'];
+            }
+        } catch (PDOException $e) {
+            return "Erro ao verificar o banco de dados: " . $e->getMessage();
+        }
     }
 }

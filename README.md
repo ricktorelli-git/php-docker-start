@@ -18,14 +18,14 @@ layout e make para automatizar as tarefas.
 - mysql: container com mysql
 - phpmyadmin: container com phpmyadmin
 - redis: container com redis
-- 
+
 ### Preparando o ambiente de desenvolvimento
 - Clone o repositório:
 ```bash
 git clone nome_do_repositorio-no-github
 ```
 - Acesse o diretório do projeto
-- Dentro de 'app/' foi criada uma sugestão de estrutura de diretórios para o projeto no padrão MVC, mas você pode alterar
+- Dentro de `app/` foi criada uma sugestão de estrutura de diretórios para o projeto no padrão MVC, mas você pode alterar
   conforme a necessidade do seu projeto, o importante é que o diretório 'public/' seja o diretório raiz do projeto.
 
 - Altere as variáveis de ambiente no arquivo .env.example
@@ -57,42 +57,42 @@ make
 ### Comandos úteis
 - Para iniciar os containers:
 ````bash
-docker-compose up -d
+docker compose up -d
 ````
 - Para parar os containers:
 ````bash
-docker-compose down
+docker compose down
 ````
 - Para parar e remover os containers:
 ````bash
-docker-compose down --volumes
+docker compose down --volumes
 ````
 ```bash
 docker compose build --no-cache # Recria as imagens
 ```
 - Para acessar o container php_fpm e saber a versão do php:
 ```bash
-docker-compose run --rm php_fpm php -v
+docker compose run --rm php_fpm php -v
 ```
 - Para acessar o container php_fpm e saber a versão do composer:
 ```bash
-docker-compose run --rm php_fpm composer --version
+docker compose run --rm php_fpm composer --version
 ```
 - Para instalar as dependências do projeto:
 ```bash
-docker-compose run --rm php_fpm composer install
+docker compose run --rm php_fpm composer install
 ```
 - Instalar um pacote novo no composer:
 ```bash
-docker-compose run --rm php_fpm composer require pacote/nome
+docker compose run --rm php_fpm composer require pacote/nome
 ```
 - Rodar sempre que alterar algo no arquivo `composer.json`
 ```bash
-docker-compose run --rm php_fpm composer dump-autoload
+docker compose run --rm php_fpm composer dump-autoload
 ```
 - Para acessar o container mysql e executar comandos sql:
 ```bash
-docker-compose exec mysql mysql -uroot -p
+docker compose exec mysql mysql -uroot -p
 ```
 
 
