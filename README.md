@@ -70,6 +70,12 @@ docker compose down --volumes
 ```bash
 docker compose build --no-cache # Recria as imagens
 ```
+- Forcar a recriação dos containers em ambiente de desenvolvimento:
+```bash
+docker-compose down                                                                   ✔  took 7s   at 07:05:46  ▓▒░
+docker-compose build --no-cache
+docker-compose up -d
+```
 - Para acessar o container php_fpm e saber a versão do php:
 ```bash
 docker compose run --rm php_fpm php -v
